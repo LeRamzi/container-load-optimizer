@@ -8,7 +8,7 @@ Load CSV and validate
 
 @st.cache_data def load_csv(file): df = pd.read_csv(file) expected_cols = ["ItemID", "Length", "Width", "Height", "Weight", "Quantity", "Stackable (yes/no)", "Fragile (yes/no)"] if not all(col in df.columns for col in expected_cols): st.error("CSV missing one or more required columns.") return None return df
 
-Placeholder 3D item placement logic (naive stack)
+# Placeholder 3D item placement logic (naive stack)
 
 def pack_items(df, container_dims): items = [] x, y, z = 0, 0, 0 max_x, max_y, max_z = container_dims layer_height = 0
 
